@@ -1,7 +1,7 @@
 const Skill = () => {
     return (
         <>
-            <div className="bg-[#F5F5F5] w-full h-[44.6rem] flex flex-col items-center justify-center gap-y-4 " id="skills">
+            <div className="bg-[#F7F7F7] w-full h-[44.6rem] flex flex-col items-center justify-center gap-y-4 " id="skills">
                 <h3 className="text-[1.5rem] pb-16">SOME TECHNOLOGIES I HAVE WORKED WITH</h3>
                 <div className="flex items-center justify-center gap-x-28">
                     <img src="images/html.png" className="w-[6rem]" alt="" />

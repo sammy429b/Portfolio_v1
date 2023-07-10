@@ -1,26 +1,24 @@
-
+// import GitHubIcon from '@mui/icons-material/GitHub';
 const Project = () => {
   return (
     <>
-      <div className="projectSection" id="project">
-            <h3>WHAT I HAVE DONE</h3>
-            <div className="rowProject1">
-                <div className="projectCard card1">
-                    <div className="cardDetail cDetail1">
-                        <span className="material-symbols-outlined">
-                        <img src="images/project1.png" alt=""  />
-                        </span>
-                    </div>
+      <div className="w-full h-[44.6rem] flex flex-col items-center justify-center" id="project">
+        <h2>My Projects</h2>
+        <div className="">
+            <div>
+                <div>
+                    {/* <GitHubIcon/> */}
                 </div>
-                <div className="projectCard card2">
-                    <img src="images/project2.png" alt=""  />
+                <div>
+                    <h2>ProjectName</h2>
+                    <p>Description</p>
                 </div>
-                <div className="projectCard card3">
-                    <img src="images/project3.png" alt=""  />
+                <div>
+                    <p>TECHNOLOGIES</p>
                 </div>
             </div>
-           
         </div>
+      </div>
     </>
   )
 }
