@@ -1,10 +1,7 @@
-import { useState } from 'react';
 import useSWR from 'swr'
-const Work = () => {
-    const[visible, setVisible] = useState(6)
-    const showMoreList = () =>{
-        setVisible(preValue => preValue + 3)
-    }
+const Work = ({visible}) => {
+
+
     const { data, error, isLoading } = useSWR("https://api.github.com/users/sammy429b/repos", async () => {
         const response = await fetch("https://api.github.com/users/sammy429b/repos");
         const data = await response.json();
@@ -35,7 +32,6 @@ const Work = () => {
                 })
             }
             
-            <button className="w-[6rem] h-[2.5rem] border-2 border-[#8892B0]" onClick={showMoreList}>Show more</button>
         </>
     )
 }
