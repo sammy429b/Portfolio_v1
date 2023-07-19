@@ -7,7 +7,7 @@ const About = () => {
                 <img src="images/logo.png" className="w-[5rem]" alt="profilephoto" />
             </div>
             <div className="w-[40rem]">
-                <p className="text-justify text-[#666666] text-[1.2rem] font-normal">Hey! My name is Samarth and I&#39;m a web developer with a passion for front end development and design. I&#39;m currently a final year student at <a href="https://www.mmcoe.edu.in/" className="text-[#00009C]">Marathwada Mitra Mandal&#39;s College of Engineering</a> pursuing a degree in computer science. Adept at identifying opportunities to enhance front-end skill and improve the user experience.</p>
+                <p className="text-justify text-[#666666] text-[1.2rem] font-normal">Hey! My name is Samarth and I&#39;m a web developer with a passion for front end development and design. I&#39;m currently a final year student at <a href="https://www.mmcoe.edu.in/" className="text-[#00009C]">Marathwada Mitra Mandal&#39;s College of Engineering</a> pursuing a degree in computer engineering. Adept at identifying opportunities to enhance front-end skill and improve the user experience.</p>
             </div>
 
         </div>
