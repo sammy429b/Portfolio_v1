@@ -3,7 +3,7 @@ import MaterialIcon from "material-icons-react";
 const Navbar = () => {
     return (
         <>
-            <header className=" w-full h-[5rem] flex justify-between px-2 items-center md:bg-[#0A192F]">
+            <header className="w-full h-[5rem] flex justify-between px-2 items-center md:bg-[#0A192F]">
                 <div className="">
                     <img src="images/logo.png" alt="logo" className="w-[2.5rem] ml-4 md:pt-0"/>
                 </div>

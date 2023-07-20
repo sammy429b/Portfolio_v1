@@ -4,16 +4,15 @@ import Hero from './component/Hero'
 import Skill from './component/Skill'
 import Contact from './component/Contact'
 import Project from './component/Project'
-function App()
-{
+const App = () => {
   return (
     <>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Skill/>
-      <Project/>
-      <Contact/>
+      <Navbar />
+      <Hero />
+      <About />
+      <Skill />
+      <Project />
+      <Contact />
     </>
   )
 }
