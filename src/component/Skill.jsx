@@ -7,7 +7,7 @@ const Skill = () => {
             <div className="bg-[#F7F7F7] w-full h-[46.6rem] flex flex-col items-center justify-center gap-y-0 " id="skills">
                 <h3 className="text-[1.6rem] pb-16 text-center">SOME TECHNOLOGIES AND TOOLS I HAVE WORKED WITH</h3>
 
-                <div className="w-[30rem] lg:w-[50rem] flex flex-wrap gap-x-10 lg:gap-x-14 items-center justify-center">
+                <div className="w-[30rem] lg:w-[50rem] flex flex-wrap gap-x-10 lg:gap-x-14  items-center justify-center">
                     <div id="skill_1" className="flex flex-col items-center jusstify-center">
                         <p className="text-[4rem] hover:text-[#E44D26] duration-300">
                             <i class="devicon-html5-plain" ></i>
