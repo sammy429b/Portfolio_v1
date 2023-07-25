@@ -1,3 +1,4 @@
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from './component/Navbar'
 import About from './component/About'
 import Hero from './component/Hero'
@@ -13,6 +14,7 @@ const App = () => {
       <Skill />
       <Project />
       <Contact />
+      
     </>
   )
 }

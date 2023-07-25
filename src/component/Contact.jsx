@@ -1,5 +1,21 @@
 import Footer from "./Footer";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser'
+// import { Send } from "@mui/icons-material";
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = () => {
+    // e.preventDefault();
+
+    emailjs.sendForm('service_lbxxd9h', 'template_otgk3yd', form.current, 'rA05W-pTSuyJz3qtq')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <div>
       <div className="bg-[#f0f0f0] w-full h-[40rem] flex flex-col items-center justify-center  text-center">
@@ -13,7 +29,9 @@ const Contact = () => {
             free to shoot me an email!
           </p>
 
-          <div className="my-4 flex flex-col lg:flex-row gap-y-8 gap-x-4">
+          <form ref={form} onSubmit={sendEmail} method="POST" className="flex flex-col gap-4 ">
+
+          <div className="my-4 flex flex-col lg:flex-row gap-y-6 gap-x-4">
             <div className="relative">
               <input
                 type="text"
@@ -26,8 +44,8 @@ const Contact = () => {
               />
               <label
                 htmlFor="name"
-                className="absolute text-[1rem] left-0 -top-4  peer-placeholder-shown:top-1 peer-focus:-top-4 peer-focus:text-gra peer-focus:text-[0.85rem] duration-300 "
-              >
+                className="absolute text-[.9rem] left-0 -top-4  peer-placeholder-shown:top-1 peer-focus:-top-4 peer-focus:text-gra peer-focus:text-[0.8rem] duration-300 transition-all"
+                >
                 Name
               </label>
             </div>
@@ -40,17 +58,17 @@ const Contact = () => {
                 autoComplete="off"
                 required
                 placeholder="Email"
-              />
+                />
               <label
                 htmlFor="email"
-                className="absolute text-[1rem] left-0 -top-4  peer-placeholder-shown:top-1 peer-focus:-top-4 peer-focus:text-gra peer-focus:text-[0.85rem] duration-300"
+                className="absolute text-[.9rem] left-0 -top-4  peer-placeholder-shown:top-1 peer-focus:-top-4 peer-focus:text-gra peer-focus:text-[0.8rem] duration-300 transition-all"
               >
                 Email
               </label>
             </div>
           </div>
 
-          <div className="relative my-4">
+          <div className="relative my-2">
             <input
               type="text"
               name="message"
@@ -62,18 +80,15 @@ const Contact = () => {
             />
             <label
               htmlFor="message"
-              className="absolute text-[1rem] left-0 -top-4  peer-placeholder-shown:top-1 peer-focus:-top-4 peer-focus:text-gra peer-focus:text-[0.85rem] duration-300"
+              className="absolute text-[.9rem] left-0 -top-4  peer-placeholder-shown:top-1 peer-focus:-top-4 peer-focus:text-gra peer-focus:text-[0.8rem] duration-300 transition-all"
             >
               Message
             </label>
           </div>
 
-          <a
-            href="mailto:samarthnbahirgonde49@gmail.com"
-            className="w-[10rem] h-[3rem] text-[1.2rem] text-[#6161BE] flex items-center justify-center border-2 border-[#111111] hover:bg-[#6161BE] hover:text-white hover:border-[#6161BE] hover:duration-[0.7s]"
-          >
-            Say Hello
-          </a>
+         <input type="submit"  className="w-[8rem] h-[2.5rem] text-[1.1rem] text-[#6161BE] flex items-center justify-center border-2 border-[#6161BE] hover:bg-[#6161BE] hover:text-white hover:border-[#6161BE] hover:duration-[0.7s]" />
+            
+      </form>
         </div>
       </div>
 
