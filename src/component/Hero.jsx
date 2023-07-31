@@ -1,10 +1,13 @@
 import { Typewriter } from 'react-simple-typewriter'
+import Navbar from './Navbar'
 const Hero = () => {
   // const {text} = useTypewriter({
   //   words:['Developer', 'Designer', 'Coder'],
   //   loop:{},
   // });
   return (
+  <>
+    {/* <Navbar/> */}
     <div className='flex'>
       <div className="lg:w-1/2 ont-Poppins w-full h-[41.4rem] bg-[#0A192F] pb-24 flex flex-col pl-[7rem] gap-y-1 text-left lg:items-start justify-center">
         <h1 className="font-Poppins text-[1.7rem] lg:text-[2.3rem] text-[#F5F5F5] font-semibold">Hello, I'm a</h1>
@@ -33,6 +36,7 @@ const Hero = () => {
         <img src="/images/Hero.svg" className="w-[35.9rem] object-fill " alt="" />
       </div>
     </div>
+  </>
   )
 }
 

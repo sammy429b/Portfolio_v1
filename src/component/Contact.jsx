@@ -24,20 +24,20 @@ const Contact = () => {
           id="contact"
         >
           <h3 className="text-[2rem] font-medium">GET IN TOUCH!</h3>
-          <p className="w-[27rem] text-[1.1rem]">
+          <p className="w-[20rem] sm:w-[27rem] text-[1.1rem]">
             Whether you have an idea for a project or just want to chat, feel
             free to shoot me an email!
           </p>
 
           <form ref={form} onSubmit={sendEmail} method="POST" className="flex flex-col gap-4 ">
 
-          <div className="my-4 flex flex-col lg:flex-row gap-y-6 gap-x-4">
-            <div className="relative">
+          <div className="my-4 flex flex-col lg:flex-row gap-y-6 lg:gap-x-4 ">
+            <div className="relative mx-2">
               <input
                 type="text"
                 name="name"
                 id="name"
-                className="border-b-2 border-[#8892B0] placeholder-transparent bg-[#f0f0f0] py-1 w-[26rem] lg:w-[15rem] appearance-none outline-none block peer"
+                className="border-b-2 border-[#8892B0] placeholder-transparent bg-[#f0f0f0] py-1 w-[23rem] sm:w-[26rem] lg:w-[15rem] appearance-none outline-none block peer"
                 autoComplete="off"
                 required
                 placeholder="Name"
@@ -49,12 +49,12 @@ const Contact = () => {
                 Name
               </label>
             </div>
-            <div className="relative">
+            <div className="relative mx-2">
               <input
                 type="email"
                 name="email"
                 id="email"
-                className="border-b-2 border-[#8892B0] placeholder-transparent bg-[#f0f0f0] py-1 w-[26rem] lg:w-[15rem] appearance-none outline-none block peer"
+                className="border-b-2 border-[#8892B0] placeholder-transparent bg-[#f0f0f0] py-1 w-[23rem] sm:w-[26rem] lg:w-[15rem] appearance-none outline-none block peer"
                 autoComplete="off"
                 required
                 placeholder="Email"
@@ -68,12 +68,12 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="relative my-2">
+          <div className="relative my-2 mx-2">
             <input
               type="text"
               name="message"
               id="message"
-              className="border-b-2 border-[#8892B0] placeholder-transparent bg-[#f0f0f0] py-1 w-[26rem] lg:w-[31rem] appearance-none outline-none block peer"
+              className="border-b-2 border-[#8892B0] placeholder-transparent bg-[#f0f0f0] py-1 w-[23rem] sm:w-[26rem] lg:w-[31rem] appearance-none outline-none block peer"
               autoComplete="off"
               required
               placeholder="Message"
@@ -85,8 +85,9 @@ const Contact = () => {
               Message
             </label>
           </div>
-
-         <input type="submit"  className="w-[8rem] h-[2.5rem] text-[1.1rem] text-[#6161BE] flex items-center justify-center border-2 border-[#6161BE] hover:bg-[#6161BE] hover:text-white hover:border-[#6161BE] hover:duration-[0.7s]" />
+          <div className="mx-2 w-full flex items-center justify-center">
+            <input type="submit"  className="w-[8rem] h-[2.5rem] text-[1.1rem] text-[#6161BE] flex items-center justify-center border-2 border-[#6161BE] hover:bg-[#6161BE] hover:text-white hover:border-[#6161BE] hover:duration-[0.7s]" />
+          </div>
             
       </form>
         </div>
