@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <>
-      <div className="w-full h-[48.6rem] bg-[#FFFFFF] gap-y-8 pb-12 flex flex-col justify-center items-center" id="about">
+      <div className="w-full h-[48.6rem] bg-[#FAFAFA] gap-y-8 pb-12 flex flex-col justify-center items-center" id="about">
             <h2 className="text-[1.9rem]  font-semibold uppercase">About me</h2>
             <div className=" bg-[rgb(0,0,0,0.2)] rounded-[20rem] w-[11rem] h-[11rem] flex justify-center items-center">
                 <img src="images/logo.png" className="w-[5rem]" alt="profilephoto" />

@@ -1,12 +1,12 @@
 import Footer from "./Footer";
 import { useRef } from "react";
 import emailjs from '@emailjs/browser'
-// import { Send } from "@mui/icons-material";
+
 const Contact = () => {
   const form = useRef();
 
-  const sendEmail = () => {
-    // e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
     emailjs.sendForm('service_lbxxd9h', 'template_otgk3yd', form.current, 'rA05W-pTSuyJz3qtq')
       .then((result) => {
