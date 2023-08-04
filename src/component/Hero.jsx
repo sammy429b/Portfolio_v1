@@ -1,4 +1,5 @@
 import { Typewriter } from 'react-simple-typewriter'
+
 const Hero = () => {
 
   return (
@@ -13,7 +14,9 @@ const Hero = () => {
           </p>
 
           <div className='mt-4'>
+            <a href="#contact">
             <button className='shadow-lg w-[8rem] h-[3rem] text-blue-600 border-2 rounded-sm border-blue-600 hover:bg-blue-600 duration-500 hover:text-white mr-2'>Get in touch</button>
+            </a>
           </div>
 
           <div className='items-center justify-center w-[9rem] h-[4rem] text-black flex text-[2rem] mt-2 '>
