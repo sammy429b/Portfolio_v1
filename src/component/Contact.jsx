@@ -49,7 +49,7 @@ const Contact = () => {
         draggable
         pauseOnHover
         theme="light" />
-      <div className="bg-[#f0f0f0] w-full h-[40rem] flex flex-col items-center justify-center  text-center">
+      <div className="bg-[#f0f0f0] w-full min-h-screen flex flex-col items-center justify-center  text-center">
         <div
           className="flex flex-col items-center justify-center gap-y-3"
           id="contact"
@@ -57,13 +57,13 @@ const Contact = () => {
           <h3 className="text-[2rem] font-medium">GET IN TOUCH!</h3>
           <p className="w-[20rem] sm:w-[27rem] text-[1.1rem]">
             Whether you have an idea for a project or just want to chat, feel
-            free to shoot me an email!
+            free to shoot me a message!
           </p>
 
           <form ref={form} onSubmit={handleSubmit} method="POST" className="flex flex-col gap-4 ">
 
             <div className="my-4 flex flex-col lg:flex-row gap-y-6 lg:gap-x-4 ">
-              <div className="relative mx-2">
+              <div className="relative mx-0">
                 <input
                   type="text"
                   name="name"
@@ -81,7 +81,7 @@ const Contact = () => {
                   Name
                 </label>
               </div>
-              <div className="relative mx-2">
+              <div className="relative mx-0">
                 <input
                   type="email"
                   name="email"
@@ -101,7 +101,7 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="relative my-2 mx-2">
+            <div className="relative my-2 mx-0">
               <input
                 type="text"
                 name="message"

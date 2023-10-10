@@ -15,7 +15,7 @@ const Work = ({visible}) => {
                 data.slice(0,visible).map((repo) => {
                     return (
                         <div key={repo.id} className="bg-[#0A192F] rounded-lg shadow-md shadow-black text-white sm:w-[19rem] lg:w-[22rem] xl:w-[28rem] h-[rem] flex flex-col items-start p-4 lg:p-6 justify-center gap-y-8">
-                            <div className=" w-[22rem]  sm:w-[19rem] lg:w-[20rem] xl:w-[26rem] h-[4rem] flex items-center justify-between p-4">
+                            <div className=" w-[20rem]  sm:w-[19rem] lg:w-[20rem] xl:w-[26rem] h-[4rem] flex items-center justify-between p-4">
                                 <img src="images/folder.png" alt="" className="w-[3.5rem]" />
                                 <a href={repo.clone_url}>
                                     <img src="images/githubIcon.png" alt="" className="w-[3.5rem]" />
