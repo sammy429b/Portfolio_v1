@@ -7,14 +7,14 @@ import Project from './component/Project'
 const App = () => {
   return (
     <>
-     
-        <Navbar/>
-        <Hero/>
-        <About/>
-        <Skill/>
-        <Project/>
-        <Contact/>
-   
+
+      <Navbar />
+      <Hero />
+      <About />
+      <Skill />
+      <Project />
+      <Contact />
+
     </>
   )
 }
