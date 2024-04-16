@@ -1,11 +1,11 @@
 import { useState } from "react";
-
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(true);
     const changeToggle = () => {
         setIsOpen(!isOpen);
     }
 
+    const Resume = import.meta.env.VITE_ResumeLink;
     return (
         <>
             <header className="w-full  h-[5rem] flex justify-between px-2 items-center bg-[#F0F0F0]">
@@ -18,7 +18,7 @@ const Navbar = () => {
                     <p onClick={changeToggle}><a href="#project" id="" className="hover:text-blue-600 duration-300 text-[1.1rem] font-medium hover:border-blue-600 hover:border-b-4 px-2 pb-2">Project </a></p>
                     <p onClick={changeToggle}><a href="#contact" id="" className="hover:text-blue-600 duration-300 text-[1.1rem] font-medium hover:border-blue-600 hover:border-b-4 px-2 pb-2">Contact </a></p>
                     <p onClick={changeToggle} className=" ">
-                        <a href="https://drive.google.com/file/d/1GIdcAN5PElSs_hjqrY2RdV89lh_yW-JW/view?usp=drive_link" className=""><button className="w-[7rem] h-[2.6rem] border-2 text-white text-[1.05rem] rounded-md bg-blue-600 hover:bg-blue-500 duration-500 hover:text-white mr-2">Resume</button></a>
+                        <a href={Resume} className=""><button className="w-[7rem] h-[2.6rem] border-2 text-white text-[1.05rem] rounded-md bg-blue-600 hover:bg-blue-500 duration-500 hover:text-white mr-2">Resume</button></a>
                     </p>
                 </div>
                 <button className="md:hidden w-[2rem] h-auto mr-4" onClick={changeToggle}>

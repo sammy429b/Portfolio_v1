@@ -13,11 +13,17 @@ const Contact = () => {
     sendEmail(e);
   }
 
-
+console.log(import.meta.env.VITE_YOUR_SERVICE_ID)
+console.log(import.meta.env.VITE_YOUR_TEMPLATE_ID)
+console.log(import.meta.env.VITE_YOUR_PUBLIC_KEY) 
 
   const sendEmail = (e) => {
     e.preventDefault();
    
+    
+    emailjs.sendForm(import.meta.env.VITE_YOUR_SERVICE_ID, import.meta.env.VITE_YOUR_TEMPLATE_ID, form.current, import.meta.env.VITE_YOUR_PUBLIC_KEY)
+    .then((result) => {
+      console.log(result.text);
       toast('Thank you for messaging me.', {
         position: "top-center",
         autoClose: 5000,
@@ -28,13 +34,21 @@ const Contact = () => {
         progress: undefined,
         theme: "light",
       })
-
-    emailjs.sendForm('service_lbxxd9h', 'template_otgk3yd', form.current, 'rA05W-pTSuyJz3qtq')
-      .then((result) => {
-        console.log(result.text);
-      }, (error) => {
-        console.log(error.text);
-      });
+    }, (error) => {
+      console.log(error.text);
+      toast(error.text, {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
+    });
+    
+    
   };
 
   return (

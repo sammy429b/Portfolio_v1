@@ -32,7 +32,7 @@ const Hero = () => {
 
           <div className="items-center justify-center w-[9rem] h-[4rem] text-black flex text-[2rem] mt-2 ">
             <a
-              href="https://github.com/sammy429b"
+              href={import.meta.env.VITE_GitLink}
               target="_blank"
               rel="noreferrer"
               className="duration-200 mx-2 hover:mb-2 w-[10rem] hover:shadow-md px-2"
@@ -40,7 +40,7 @@ const Hero = () => {
               <i className="fa-brands fa-github"></i>
             </a>
             <a
-              href="https://instagram.com/_sam_429_b?igshid=NGExMmI2YTkyZg=="
+              href={import.meta.env.VITE_InstaLink}
               target="_blank"
               rel="noreferrer"
               className="duration-200 mx-2 hover:mb-2 hover:shadow-md px-2"
@@ -48,7 +48,7 @@ const Hero = () => {
               <i className="fa-brands fa-instagram"></i>
             </a>
             <a
-              href="https://www.linkedin.com/in/samarth-bahirgonde/"
+              href={import.meta.env.VITE_LinkedInLink}
               target="_blank"
               rel="noreferrer"
               className="duration-200 mx-2 hover:mb-2 hover:shadow-md px-2"
