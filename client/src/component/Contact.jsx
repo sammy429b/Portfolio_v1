@@ -1,55 +1,27 @@
 import Footer from "./Footer";
-import { useRef } from "react";
-import emailjs from '@emailjs/browser'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import {useForm} from 'react-hook-form'
 import { useState } from "react";
+import axios from 'axios'
+
+
 const Contact = () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [message, setMessage] = useState("")
-  const form = useRef();
-  const handleSubmit = (e) => {
-    sendEmail(e);
+ 
+  const [loading, setLoading] = useState(false)
+  const{register, handleSubmit} = useForm()
+
+  const handleSendEmail = async(values) =>{
+
+    console.log(values)
+    try {
+        const response = await axios.post('http://localhost:4000/contact', values)
+        const data = await response.data;
+        console.log(response)
+    } catch (error) {
+      console.log(error)
+    }
   }
-
-console.log(import.meta.env.VITE_YOUR_SERVICE_ID)
-console.log(import.meta.env.VITE_YOUR_TEMPLATE_ID)
-console.log(import.meta.env.VITE_YOUR_PUBLIC_KEY) 
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-   
-    
-    emailjs.sendForm(import.meta.env.VITE_YOUR_SERVICE_ID, import.meta.env.VITE_YOUR_TEMPLATE_ID, form.current, import.meta.env.VITE_YOUR_PUBLIC_KEY)
-    .then((result) => {
-      console.log(result.text);
-      toast('Thank you for messaging me.', {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      })
-    }, (error) => {
-      console.log(error.text);
-      toast(error.text, {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      })
-    });
-    
-    
-  };
 
   return (
     <div>
@@ -74,11 +46,12 @@ console.log(import.meta.env.VITE_YOUR_PUBLIC_KEY)
             free to shoot me a message!
           </p>
 
-          <form ref={form} onSubmit={handleSubmit} method="POST" className="flex flex-col gap-4 ">
+          <form onSubmit={handleSubmit(handleSendEmail)} className="flex flex-col gap-4">
 
             <div className="my-4 flex flex-col lg:flex-row gap-y-6 lg:gap-x-4 ">
               <div className="relative mx-0">
                 <input
+                 {...register('name', {required:true})}
                   type="text"
                   name="name"
                   id="name"
@@ -86,7 +59,6 @@ console.log(import.meta.env.VITE_YOUR_PUBLIC_KEY)
                   autoComplete="off"
                   required
                   placeholder="Name"
-                  onChange={(e) => setName(e.target.value)}
                 />
                 <label
                   htmlFor="name"
@@ -97,6 +69,7 @@ console.log(import.meta.env.VITE_YOUR_PUBLIC_KEY)
               </div>
               <div className="relative mx-0">
                 <input
+                  {...register('email', {required: true})}
                   type="email"
                   name="email"
                   id="email"
@@ -104,7 +77,6 @@ console.log(import.meta.env.VITE_YOUR_PUBLIC_KEY)
                   autoComplete="off"
                   required
                   placeholder="Email"
-                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <label
                   htmlFor="email"
@@ -117,6 +89,7 @@ console.log(import.meta.env.VITE_YOUR_PUBLIC_KEY)
 
             <div className="relative my-2 mx-0">
               <input
+                {...register('message',{required:true}) }      
                 type="text"
                 name="message"
                 id="message"
@@ -124,7 +97,6 @@ console.log(import.meta.env.VITE_YOUR_PUBLIC_KEY)
                 autoComplete="off"
                 required
                 placeholder="Message"
-                onChange={(e) => setMessage(e.target.value)}
               />
               <label
                 htmlFor="message"
